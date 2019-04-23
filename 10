@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<math.h>
+
+double Parcelas(int n){
+	int i;
+	double soma=0;
+	
+	for(i=0;i<=n;i++){
+		soma+= (pow(i,2)+1)/(i+3);
+	}
+	return soma;
+}
+int main(){
+	int parcelas;
+	double resultado;
+	printf("digite o numero de parcelas a serem calculadas: ");
+	scanf("%d",&parcelas);
+	resultado=Parcelas(parcelas);
+	printf("\n %lf",resultado);
+	
+	return 0;
+}
